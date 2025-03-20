@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CardCollector - Ouverture de Bundle</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">CardCollector</div>
+        <nav id="main-nav">
+            <!-- Le menu sera chargé dynamiquement par JS selon statut connexion -->
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="bundle-container">
+            <h1>Acheter un Bundle</h1>
+            <div id="message-container" class="message-container"></div>
+            
+            <div class="bundle-info">
+                <div class="bundle-card">
+                    <h2>Bundle Standard</h2>
+                    <p>Contient 5 cartes aléatoires</p>
+                    <p class="price">Prix: <span id="bundle-price">100</span> Kidcoins</p>
+                    <button id="buy-bundle" class="btn primary">Acheter et ouvrir</button>
+                </div>
+                
+                <div class="balance-info">
+                    <p>Votre solde: <span id="user-balance">Chargement...</span> Kidcoins</p>
+                </div>
+            </div>
+            
+            <div id="bundle-result" class="bundle-result hidden">
+                <h2>Nouvelles cartes obtenues</h2>
+                <div id="cards-result" class="cards-grid">
+                    <!-- Les cartes obtenues seront affichées ici -->
+                </div>
+                <button id="reset-bundle" class="btn secondary">Ouvrir un autre bundle</button>
+            </div>
+            
+            <div class="actions">
+                <a href="collection.html" class="btn secondary">Voir ma collection</a>
+                <a href="account.html" class="btn secondary">Retour au compte</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 CardCollector. Tous droits réservés.</p>
+    </footer>
+
+    <script src="js/common.js"></script>
+    <script src="js/bundle.js"></script>
+</body>
+</html>

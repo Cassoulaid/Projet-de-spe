@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CardCollector - Connexion</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">CardCollector</div>
+        <nav id="main-nav">
+            <!-- Le menu sera chargé dynamiquement par JS selon statut connexion -->
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="auth-form">
+            <h1>Connexion</h1>
+            <div id="message-container" class="message-container"></div>
+            
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Mot de passe</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit" class="btn primary">Se connecter</button>
+            </form>
+            
+            <div class="auth-links">
+                <p>Pas encore de compte ? <a href="register.html">S'inscrire</a></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 CardCollector. Tous droits réservés.</p>
+    </footer>
+
+    <script src="js/common.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model images_collection {
+  id          Int     @id @default(autoincrement())
+  name        String? @db.VarChar(255)
+  description String? @db.Text
+  image_url   String? @db.Text
+  attributes attributes_rarity[] @relation("card_attribute")
+}
+
+
+model attributes_rarity {
+   id          Int     @id @default(autoincrement())
+   trait_category String
+   trait_type String
+   rarity Float
+  cards images_collection[] @relation("card_attribute")
+}

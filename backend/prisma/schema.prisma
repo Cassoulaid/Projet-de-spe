@@ -23,3 +23,10 @@ model attributes_rarity {
    rarity Float
   cards images_collection[] @relation("card_attribute")
 }
+
+
+model user {
+  id Int @id @default(autoincrement())
+  user_name String @unique
+  user_password String @db.VarChar(255)
+}
